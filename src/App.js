@@ -3,7 +3,6 @@ import "./App.css";
 import MyAccordian from "./MyAccordian";
 
 function App() {
-
   var sumC1 = 0;
   var sumC2 = 0;
 
@@ -30,7 +29,10 @@ function App() {
   let tempC1 = beforeC1.slice();
   let tempC2 = beforeC2.slice();
   let unwanted = [];
+
+  // main funtion to update Tables
   const setData = () => {
+    // for 1st Column
     for (let i = 0; i < tempC1.length; i++) {
       let k = tempC1[i][0];
       if (tempC1[i][0] in C1 && tempC1[i][1] === C1[`${k}`]) {
@@ -47,14 +49,13 @@ function App() {
         }
       }
     }
-
+    // for 2st Column
     for (let i = 0; i < tempC2.length; i++) {
       let k = tempC2[i][0];
       if (tempC2[i][0] in C2 && tempC2[i][1] === C2[`${k}`]) {
-        console.log("true",tempC2[i])
+        console.log("true", tempC2[i]);
         continue;
-      }
-      else {
+      } else {
         let a = tempC2[i];
         let ke = a[0];
 
@@ -66,8 +67,9 @@ function App() {
         }
       }
     }
-    tempC1 = tempC1.filter(e => e!=null)
-    tempC2 = tempC2.filter(e => e!=null)
+    // filter out null values
+    tempC1 = tempC1.filter((e) => e != null);
+    tempC2 = tempC2.filter((e) => e != null);
 
     // find sum
     for (let i = 0; i < tempC1.length; i++) {
@@ -76,7 +78,6 @@ function App() {
     for (let i = 0; i < tempC2.length; i++) {
       sumC2 += tempC2[i][2];
     }
-   
   };
   setData();
   console.log(unwanted);
@@ -96,7 +97,7 @@ function App() {
 
       <hr />
       <div>
-        <h1>After Changing Table</h1>
+        <h1>After Updating Table</h1>
         <div className="main_table">
           <table className="after_C1">
             <MyAccordian data={tempC1} sum={sumC1} />
