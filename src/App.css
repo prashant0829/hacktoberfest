@@ -1,0 +1,20 @@
+table td {
+  padding: 1rem 2rem;
+}
+table th {
+  padding: 1rem;
+}
+.main_table {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+}
+tr {
+  width: 100%;
+}
+table {
+  margin: 1rem;
+  /* border-right: 2px solid black; */
+}
