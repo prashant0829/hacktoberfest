@@ -3,6 +3,7 @@ table td {
 }
 table th {
   padding: 1rem;
+  background-color: aliceblue;
 }
 .main_table {
   display: flex;
