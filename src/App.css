@@ -3,6 +3,7 @@ table td {
 }
 table th {
   padding: 1rem;
+  font-weight: 500;
 }
 .main_table {
   display: flex;
